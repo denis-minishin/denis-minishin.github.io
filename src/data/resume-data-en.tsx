@@ -54,7 +54,7 @@ export const RESUME_DATA_EN = {
       " ",
       "Having a specialized higher education allows me to deeply comprehend the theoretical foundations and practical aspects of my specialization. I aspire to automate work processes by utilizing the full potential of CAD software. I am prepared to learn new things, enhance existing skills, and apply my knowledge and experience to accomplish set objectives.",
     ],
-  avatarUrl: "https://avatars.githubusercontent.com/u/73300108?v=4",
+  avatarUrl: "./images/73300108.jpg",
   personalWebsiteUrl: "./en",
   contact: {
     email: "denis.minishin@gmail.com",
