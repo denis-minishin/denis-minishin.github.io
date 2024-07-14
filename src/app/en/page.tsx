@@ -11,7 +11,8 @@ import { ProjectCard } from "@/components/project-card";
 import { calculateTotalWorkExperienceEn } from "@/components/calculateWorkDurationEn";
 import calculateWorkDurationEn from "@/components/calculateWorkDurationEn";
 import PrintButtonEn from "@/components/PrintButtonEn";
-import CopyLinkButtonEn from "@/components/CopyLinkButtonEn";
+import ShareButtonEn from "@/components/ShareButtonEn";
+import TranslateRuButtonEn from "@/components/TranslateRuButtonEn";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -102,19 +103,15 @@ export default function Page() {
                   size="icon"
                   asChild
                 >
-                  {social.name === "Резюме на русском" ? (
-                    <a href={social.url}>
-                      <social.icon className="size-4" />
+                  <a href={social.url} target="_blank">
+                    <social.icon className="size-4" />
                     </a>
-                  ) : (
-                    <a href={social.url} target="_blank">
-                      <social.icon className="size-4" />
-                    </a>
-                  )}
+                  
                 </Button>
               ))}
+              <TranslateRuButtonEn />
               <PrintButtonEn />
-              <CopyLinkButtonEn />
+              <ShareButtonEn />
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex print:text-[12px]">
               <a

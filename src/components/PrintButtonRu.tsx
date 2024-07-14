@@ -28,7 +28,7 @@ const PrintButtonRu: React.FC<PrintButtonProps> = ({ className }) => {
       </button>
       {showTooltip && (
         <div
-          className="absolute top-[-53px] left-[100%] transform -translate-x-1/2 bg-gray-700 text-white px-2 py-1 rounded-md transition-opacity duration-300"
+          className="absolute top-[-53px] left-1/2 transform -translate-x-1/2 bg-gray-700 text-white px-2 py-1 rounded-md transition-opacity duration-300"
         >
           Печать резюме
         </div>

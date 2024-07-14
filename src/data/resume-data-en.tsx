@@ -17,7 +17,7 @@ import {
   TastyCloudLogo,
   YearProgressLogo,
 } from "@/images/logos";
-import { TelegramEnIcon, WhatsAppEnIcon, ViberEnIcon, RuIcon } from "@/components/icons";
+import { TelegramEnIcon, WhatsAppEnIcon, ViberEnIcon } from "@/components/icons";
 
 const birthdate = new Date('1998-09-16'); // Укажите Вашу дату рождения
 
@@ -77,11 +77,6 @@ export const RESUME_DATA_EN = {
         name: "Write in Viber",
         url: "viber://chat?number=%2B79135851559",
         icon: ViberEnIcon,
-      },
-      {
-        name: "Резюме на русском",
-        url: "./",
-        icon: RuIcon,
       },
     ],
   },
