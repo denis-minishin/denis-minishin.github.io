@@ -26,10 +26,6 @@ export function VkIcon(props: SVGProps<SVGSVGElement>) {
   return (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}><path fill="currentColor" fillRule="evenodd" d="M23.45 5.948c.166-.546 0-.948-.795-.948H20.03c-.668 0-.976.347-1.143.73c0 0-1.335 3.196-3.226 5.272c-.612.602-.89.793-1.224.793c-.167 0-.418-.191-.418-.738V5.948c0-.656-.184-.948-.74-.948H9.151c-.417 0-.668.304-.668.593c0 .621.946.765 1.043 2.513v3.798c0 .833-.153.984-.487.984c-.89 0-3.055-3.211-4.34-6.885C4.45 5.288 4.198 5 3.527 5H.9c-.75 0-.9.347-.9.73c0 .682.89 4.07 4.145 8.551C6.315 17.341 9.37 19 12.153 19c1.669 0 1.875-.368 1.875-1.003v-2.313c0-.737.158-.884.687-.884c.39 0 1.057.192 2.615 1.667C19.11 18.216 19.403 19 20.405 19h2.625c.75 0 1.126-.368.91-1.096c-.238-.724-1.088-1.775-2.215-3.022c-.612-.71-1.53-1.475-1.809-1.858c-.389-.491-.278-.71 0-1.147c0 0 3.2-4.426 3.533-5.929" clipRule="evenodd"></path></svg>);
 }
 
-export function EvernoteIcon(props: SVGProps<SVGSVGElement>) {
-	return (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M8.222 5.393c0 .239-.02.637-.256.895c-.257.24-.652.259-.888.259H4.552c-.73 0-1.165 0-1.46.04c-.159.02-.356.1-.455.14c-.04.019-.04 0-.02-.02L8.38.796c.02-.02.04-.02.02.02c-.04.099-.118.298-.138.457c-.04.298-.04.736-.04 1.472v2.647zm5.348 17.869c-.67-.438-1.026-1.015-1.164-1.373a2.9 2.9 0 0 1-.217-1.095a3.007 3.007 0 0 1 3-3.004c.493 0 .888.398.888.895a.88.88 0 0 1-.454.776c-.099.06-.237.1-.336.12c-.098.02-.473.06-.65.218c-.198.16-.356.418-.356.697c0 .298.118.577.316.776c.355.358.829.557 1.342.557a2.436 2.436 0 0 0 2.427-2.447c0-1.214-.809-2.29-1.875-2.766c-.158-.08-.414-.14-.651-.2a8 8 0 0 0-.592-.1c-.829-.1-2.901-.755-3.04-2.605c0 0-.611 2.785-1.835 3.54c-.118.06-.276.12-.454.16c-.177.04-.374.06-.434.06c-1.993.12-4.105-.517-5.565-2.03c0 0-.987-.815-1.5-3.103c-.118-.558-.355-1.553-.493-2.488c-.06-.338-.08-.597-.099-.836c0-.975.592-1.631 1.342-1.73h4.026c.69 0 1.086-.18 1.342-.42c.336-.317.415-.775.415-1.312V1.354C9.05.617 9.703 0 10.669 0h.474c.197 0 .434.02.651.04c.158.02.296.06.533.12c1.204.298 1.46 1.532 1.46 1.532s2.27.398 3.415.597c1.085.199 3.77.378 4.282 3.104c1.204 6.487.474 12.775.415 12.775c-.849 6.129-5.901 5.83-5.901 5.83a4.1 4.1 0 0 1-2.428-.736m4.54-13.034c-.652-.06-1.204.2-1.402.697c-.04.1-.079.219-.059.278s.06.08.099.1c.237.12.631.179 1.204.239c.572.06.967.1 1.223.06c.04 0 .08-.02.119-.08c.04-.06.02-.18.02-.28c-.06-.536-.553-.934-1.204-1.014"></path></svg>);
-}
-
 export function YandexMessengerIcon(props: SVGProps<SVGSVGElement>) {
 	return (<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" {...props}><path fill="currentColor" fillRule="evenodd" d="m3.585 11.965l-.716.148a1.863 1.863 0 0 1-1.792-3.036L2 8l-.923-1.077A1.863 1.863 0 0 1 2.87 3.887l.716.148l-.07-.303a1.822 1.822 0 0 1 2.64-2.014l8.293 4.466a2 2 0 0 1 1.052 1.76v.111a2 2 0 0 1-1.052 1.761l-8.293 4.466a1.822 1.822 0 0 1-2.64-2.014zm1.617-.334l-.225.974a.322.322 0 0 0 .466.356l1.625-.875l3.895-1.647zm5.761-6.07L7.068 3.914l-1.625-.875a.322.322 0 0 0-.466.356l.225.974zM3.14 8.976L3.976 8l-.837-.976l-.923-1.077a.363.363 0 0 1 .349-.591l11.162 2.309a.342.342 0 0 1 0 .67l-11.162 2.31a.363.363 0 0 1-.349-.592z" clipRule="evenodd"></path></svg>);
 }
@@ -130,15 +126,15 @@ const CopyLinkButtonRu: React.FC<CopyLinkButtonProps> = ({ className }) => {
         >
           <ScrollLock>
           </ScrollLock>
-          <a href={`mailto:?subject=Резюме Минишин ДД - Инженер-проектировщик АСУ ТП&body=Денис Дмитриевич Минишин - Инженер-проектировщик АСУ ТП%0A%0Ahttps://${window.location.host} – Резюме%0Ahttps://${window.location.host}/#portfolio – Портфолио`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
+          <a href={`mailto:?subject=Резюме Минишин Д.Д. - Инженер-проектировщик АСУ ТП&body=Денис Дмитриевич Минишин - Инженер-проектировщик АСУ ТП%0A%0Ahttps://${window.location.host} – Резюме%0Ahttps://${window.location.host}/#portfolio – Портфолио`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
             <EmailIcon className="w-5 h-5" />
             <span className="whitespace-nowrap text-base">E-mail</span>
           </a>
-          <a href={`https://t.me/share/url?url=https://${window.location.host}&text=Резюме – ${RESUME_DATA_RU.name} | Инженер-проектировщик АСУ ТП`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
+          <a href={`https://t.me/share/url?url=https://${window.location.host}&text=${RESUME_DATA_RU.name} – Инженер-проектировщик АСУ ТП`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
             <TelegramIcon className="w-5 h-5" />
             <span className="whitespace-nowrap text-base">Telegram</span>
           </a>
-          <a href={`https://api.whatsapp.com/send?text=https://${window.location.host} Резюме – ${RESUME_DATA_RU.name} | Инженер-проектировщик АСУ ТП`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
+          <a href={`https://api.whatsapp.com/send?text=Резюме Минишин Д.Д. – https://${window.location.host}`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
             <WhatsappIcon className="w-5 h-5" />
             <span className="whitespace-nowrap text-base">WhatsApp</span>
           </a>
@@ -149,10 +145,6 @@ const CopyLinkButtonRu: React.FC<CopyLinkButtonProps> = ({ className }) => {
           <a href={`https://vk.com/share.php?url=https://${window.location.host}&title=Резюме – ${RESUME_DATA_RU.name} | Инженер-проектировщик АСУ ТП`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
             <VkIcon className="w-5 h-5" />
             <span className="whitespace-nowrap text-base">ВКонтакте</span>
-          </a> 
-          <a href={`https://www.evernote.com/clip.action?title=Резюме – ${RESUME_DATA_RU.name} – Инженер-проектировщик АСУ ТП&url=https://${window.location.host}`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
-            <EvernoteIcon className="w-5 h-5" />
-            <span className="whitespace-nowrap text-base">Evernote</span>
           </a>
           <a href={`https://yandex.ru/chat?text=https://${window.location.host}%0AРезюме – ${RESUME_DATA_RU.name} | Инженер-проектировщик АСУ ТП#/forward`} target="_blank" className="flex items-center space-x-2 hover:bg-gray-700 px-2 py-1 rounded cursor-pointer">
             <YandexMessengerIcon className="w-5 h-5" />
