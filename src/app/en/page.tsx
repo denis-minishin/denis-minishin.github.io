@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenuEn } from "@/components/command-menu-en";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { MapPin, LayoutGrid, PencilRuler, Languages, GraduationCap, BriefcaseBusiness, Info, Calendar, UserRound, MailIcon, PhoneIcon } from "lucide-react";
+import { Globe, LayoutGrid, PencilRuler, Languages, GraduationCap, BriefcaseBusiness, Info, Calendar, UserRound, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA_EN } from "@/data/resume-data-en";
 import { ProjectCard } from "@/components/project-card";
@@ -48,7 +48,7 @@ export default function Page() {
                 href={RESUME_DATA_EN.locationLink}
                 target="_blank"
               >
-                <MapPin className="size-3" />
+                <Globe className="size-3" />
                 {RESUME_DATA_EN.location}
               </a>
             </p>
