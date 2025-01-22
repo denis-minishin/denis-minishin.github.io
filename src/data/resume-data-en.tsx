@@ -46,13 +46,13 @@ export const RESUME_DATA_EN = {
     "Design Engineer / Process Control Engineer",
   summary:
     [
-      "I am an engineer with over 4 years of experience in automation and process control systems. I specialize in developing working documentation for process control systems, including process flow diagrams, control loop diagrams, instrument datasheets, and automation system architecture. Additionally, I have extensive experience in designing technical documentation for control panels and automation systems.",
+      "I am a design engineer with over 4 years of experience in the field of automation and process control systems (PCS). I have expertise in developing working documentation (WD) for process control systems, including process flow diagrams, control loop diagrams, instrument datasheets, and automation system architecture. Additionally, I have extensive experience in designing technical documentation for control panels and automation systems.",
       " ",
-      "In my work, I use such CAD software as:",
+      "In my work, I use the following CAD software:",
       "• ePLAN (Electric P8, Pro Panel, FieldSys)",
       "• AutoCAD",
       " ",
-      "Having a specialized higher education enables me to deeply understand the theoretical foundations and practical aspects of my field. I strive to automate workflows by leveraging CAD tools to their full potential. I am eager to learn new technologies, enhance my skills, and apply my expertise to achieve project objectives.",
+      "Having a specialized higher education enables me to deeply understand the theoretical foundations and practical aspects of my field. I strive to automate workflows by leveraging the full potential of CAD tools. I am eager to learn new technologies, enhance my skills, and apply my knowledge and experience to achieve set objectives.",
     ],
   avatarUrl: "./images/7330010.jpg",
   personalWebsiteUrl: "./en",
