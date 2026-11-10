@@ -25,7 +25,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Карточка предприятия — ИП Минишин Денис Дмитриевич">
   <meta property="og:description" content="Регистрационные данные · Банковские реквизиты · Контакты · ОКВЭД">
-  <meta property="og:url" content="https://denis-minishin.ru/business-info">
+  <meta property="og:url" content="https://denis-minishin.ru/business-info/">
   <meta property="og:image" content="https://denis-minishin.ru/images/business-info-cover.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -495,35 +495,30 @@
 
       /* ── Все реквизиты одним текстом (банк — из активной вкладки) ── */
       function buildAllRequisites() {
-        var bankLines = [];
-        var panel = document.querySelector('.bank-panel.active');
-        if (panel) {
-          panel.querySelectorAll('.row').forEach(function (row) {
-            var k = row.querySelector('.k');
-            var v = row.querySelector('[data-copy]');
-            if (k && v) {
-              bankLines.push(k.textContent.trim() + ': ' + (v.getAttribute('data-copy') || v.textContent).trim());
+        var lines = ['КАРТОЧКА ПРЕДПРИЯТИЯ'];
+        document.querySelectorAll('.section').forEach(function (section) {
+          var heading = section.querySelector('h2');
+          if (!heading) return;
+          lines.push('', heading.textContent.trim().toUpperCase());
+
+          if (section.classList.contains('okved-section')) {
+            var codes = Array.prototype.map.call(section.querySelectorAll('.okved-main .code, .okved-item .code'), function (code) {
+              return code.textContent.trim();
+            });
+            if (codes.length) lines.push('ОКВЭД: ' + codes.join(', '));
+            return;
+          }
+
+          var source = section.querySelector('.bank-panel.active') || section;
+          source.querySelectorAll('.row:not(.print-only)').forEach(function (row) {
+            var label = row.querySelector('.k');
+            var value = row.querySelector('[data-copy]');
+            if (label && value) {
+              lines.push(label.textContent.trim() + ': ' + (value.getAttribute('data-copy') || value.textContent).trim());
             }
           });
-        }
-        return [
-          'КАРТОЧКА ПРЕДПРИЯТИЯ',
-          'Индивидуальный предприниматель Минишин Денис Дмитриевич (ИП Минишин Д. Д.)',
-          '',
-          'ИНН: 246208789026',
-          'ОГРНИП: 326246800123098, дата регистрации: 29.07.2026',
-          'Адрес: 660012, Россия, Красноярский край, г. Красноярск, ул. Семафорная, д. 199, кв. 108',
-          'ОКПО / ОКАТО / ОКТМО: 2054196681 / 04401373000 / 04701000001',
-          '',
-          'БАНКОВСКИЕ РЕКВИЗИТЫ'
-        ].concat(bankLines).concat([
-          '',
-          'ОКВЭД: 71.12 (основной); 62.01, 62.02, 62.09, 71.12.1, 71.12.12 (дополнительные)',
-          '',
-          'Тел.: +79135851559, +79504357151',
-          'E-mail: denis.minishin@gmail.com',
-          'Сайт: https://denis-minishin.ru'
-        ]).join('\n');
+        });
+        return lines.join('\n');
       }
 
       document.getElementById('btn-copy-all').addEventListener('click', function () {
