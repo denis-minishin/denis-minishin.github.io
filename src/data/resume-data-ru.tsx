@@ -1,6 +1,38 @@
+import {
+  AmbitLogo,
+  BarepapersLogo,
+  BimLogo,
+  CDGOLogo,
+  ClevertechLogo,
+  ConsultlyLogo,
+  EvercastLogo,
+  Howdy,
+  JarockiMeLogo,
+  JojoMobileLogo,
+  Minimal,
+  MobileVikingsLogo,
+  MonitoLogo,
+  NSNLogo,
+  ParabolLogo,
+  TastyCloudLogo,
+  YearProgressLogo,
+} from "@/images/logos";
 import { TelegramRuIcon, WhatsAppRuIcon, ViberRuIcon } from "@/components/icons";
-import type { ResumeData } from "@/data/types";
-import { profile } from "@/data/profile";
+
+const birthdate = new Date('1998-09-16'); // Укажите Вашу дату рождения
+
+const calculateAge = (): number => {
+  const today = new Date();
+  const birthDate = new Date(birthdate);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+};
 
 export const RESUME_DATA_RU = {
   name: "Денис Дмитриевич Минишин",
@@ -8,11 +40,13 @@ export const RESUME_DATA_RU = {
   location: "Красноярск, Россия. МСК+4",
   locationLink: "https://www.google.com/maps/place/Krasnoyarsk",
   gender: "Мужчина",
+  age: calculateAge().toLocaleString() + " лет",
+  birthdate: "родился " + birthdate.toLocaleString('ru', { year: 'numeric', month: 'long', day: '2-digit' }),
   about:
     "Инженер-проектировщик АСУ ТП, КИПиА и диспетчеризации",
   summary:
     [
-      "Я — инженер-проектировщик с опытом работы в области автоматики и автоматизации технологических процессов (АСУ ТП). Есть опыт разработки рабочей (РД) документации разделов: АОВ, АК, АТХ, АСУД, а также опыт проектирования конструкторской документации (КД) на шкафы управления и автоматики. ",
+      "Я — инженер-проектировщик с более 4-летним опытом работы проектировщиком в области автоматики, автоматизации технологических процессов (АСУ ТП). Есть опыт разработки рабочей (РД) документации разделов: АОВ, АК, АТХ, АСУД, а также опыт проектирования конструкторской документации (КД) на шкафы управления и автоматики. ",
       " ",
       "В своей работе использую такие САПР как:",
       "• ePLAN (Electric P8, Pro Panel, FieldSys)",
@@ -20,28 +54,28 @@ export const RESUME_DATA_RU = {
       " ",
       "Наличие профильного высшего образования позволяет мне глубоко понимать теоретические основы и практические аспекты моей специализации. Я стремлюсь к автоматизации рабочих процессов, используя все возможности САПР. Готов к изучению нового, совершенствованию имеющихся навыков, применению своих знаний и опыта для достижения поставленных задач.",
     ],
-  avatarUrl: profile.avatarUrl,
-  personalWebsiteUrl: "/",
+  avatarUrl: "./images/7330010.jpg",
+  personalWebsiteUrl: "./",
   contact: {
-    email: profile.email,
-    tel1_1: profile.primaryPhone.display,
-    tel1_2: profile.primaryPhone.href,
-    tel2_1: profile.secondaryPhone.display,
-    tel2_2: profile.secondaryPhone.href,
+    email: "denis.minishin@gmail.com",
+    tel1_1: "+7 (913) 585 15-59",
+    tel1_2: "+79135851559",
+    tel2_1: "+7 (950) 435 71-51",
+    tel2_2: "+79504357151",
     social: [
       {
         name: "Написать в Telegram",
-        url: profile.social.telegram,
+        url: "https://t.me/+79135851559",
         icon: TelegramRuIcon,
       },
       {
         name: "Написать в WhatsApp",
-        url: profile.social.whatsapp,
+        url: "https://wa.me/79135851559",
         icon: WhatsAppRuIcon,
       },
       {
         name: "Написать в Viber",
-        url: profile.social.viber,
+        url: "viber://chat?number=%2B79135851559",
         icon: ViberRuIcon,
       },
     ],
@@ -77,7 +111,7 @@ export const RESUME_DATA_RU = {
       badges: [],
       title: "Инженер-проектировщик",
       logo: "",
-      start: "2022-12",
+      start: "декабрь 2022",
       end: null,
       description:
         ["⠀• разработка рабочей документации (разделы: АОВ, АК, АТХ, АСУД)",
@@ -94,8 +128,8 @@ export const RESUME_DATA_RU = {
       badges: [],
       title: "Инженер-проектировщик",
       logo: "",
-      start: "2021-04",
-      end: "2022-12",
+      start: "апрель 2021",
+      end: "декабрь 2022",
       description:
         ["• разработка рабочей документации (стадия П, стадия Р, ОТР) на АСУ ТП (разделы АК, АТХ):",
           "⠀⠀- структурные схемы комплекса технических средств",
@@ -126,8 +160,8 @@ export const RESUME_DATA_RU = {
       badges: ["Практика"],
       title: "Практикант (Производственно-технологическая практика)",
       logo: "",
-      start: "2020-06",
-      end: "2020-07",
+      start: "июнь 2020",
+      end: "июль 2020",
       description:
         ["Должностные обязанности и достижения:",
           "• Изучение производственных технологических процессов и автоматизированных систем, применяемых на предприятии, а также основ работы устройств контроля и управления в процессе эксплуатации.",
@@ -203,7 +237,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматизация комплексная. Рабочая и конструкторская документация",
-        href: "/files/portfolio/1-АК.pdf",
+        href: "./files/portfolio/1-АК.pdf",
       },
     },
     {
@@ -221,7 +255,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматизация комплексная. Рабочая и конструкторская документация",
-        href: "/files/portfolio/2-АК.pdf",
+        href: "./files/portfolio/2-АК.pdf",
       },
     },
     {
@@ -238,7 +272,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматизация комплексная. Рабочая и конструкторская документация",
-        href: "/files/portfolio/3-АК.pdf",
+        href: "./files/portfolio/3-АК.pdf",
       },
     },
     {
@@ -256,7 +290,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматизация комплексная. Рабочая и конструкторская документация",
-        href: "/files/portfolio/4-АК.pdf",
+        href: "./files/portfolio/4-АК.pdf",
       },
     },
     {
@@ -274,7 +308,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматизация общеобменной и противодымной вентиляции. Рабочая документация",
-        href: "/files/portfolio/5-АОВ.pdf",
+        href: "./files/portfolio/5-АОВ.pdf",
       },
     },
     {
@@ -292,7 +326,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматическая система управления и диспетчеризации инженерных систем. Рабочая документация",
-        href: "/files/portfolio/6-АСУД.pdf",
+        href: "./files/portfolio/6-АСУД.pdf",
       },
     },
     {
@@ -310,7 +344,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматизация отопления, вентиляции и кондиционирования. Рабочая документация",
-        href: "/files/portfolio/7-АОВ.pdf",
+        href: "./files/portfolio/7-АОВ.pdf",
       },
     },
     {
@@ -328,7 +362,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Автоматизация отопления и вентиляции. Рабочая документация",
-        href: "/files/portfolio/8-АОВ.pdf",
+        href: "./files/portfolio/8-АОВ.pdf",
       },
     },
     {
@@ -346,7 +380,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Конструкторская документация. Шкаф управления вентсистемой",
-        href: "/files/portfolio/9-КД-ШУП.pdf",
+        href: "./files/portfolio/9-КД-ШУП.pdf",
       },
     },
     {
@@ -364,7 +398,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Конструкторская документация. Шкаф управления",
-        href: "/files/portfolio/10-КД-ШУ.pdf",
+        href: "./files/portfolio/10-КД-ШУ.pdf",
       },
     },
     {
@@ -382,7 +416,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Конструкторская документация. Шкаф управления насосамия",
-        href: "/files/portfolio/11-КД-ШУН.pdf",
+        href: "./files/portfolio/11-КД-ШУН.pdf",
       },
     },
     {
@@ -400,7 +434,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Конструкторская документация. Шкаф управления вентсистемой",
-        href: "/files/portfolio/12-КД-ШУП.pdf",
+        href: "./files/portfolio/12-КД-ШУП.pdf",
       },
     },
     {
@@ -418,7 +452,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Конструкторская документация. Шкаф управления вентсистемой",
-        href: "/files/portfolio/13-КД-ШУП.pdf",
+        href: "./files/portfolio/13-КД-ШУП.pdf",
       },
     },
     {
@@ -436,7 +470,7 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Конструкторская документация. Шкаф управления тепловым пунктом",
-        href: "/files/portfolio/14-КД-ШУТП.pdf",
+        href: "./files/portfolio/14-КД-ШУТП.pdf",
       },
     },
     {
@@ -454,8 +488,8 @@ export const RESUME_DATA_RU = {
       logo: "",
       link: {
         label: "Конструкторская документация. Шкаф управления вытяжными вентиляторами",
-        href: "/files/portfolio/15-КД-ШУВ.pdf",
+        href: "./files/portfolio/15-КД-ШУВ.pdf",
       },
     },
   ],
-} as const satisfies ResumeData;
+} as const;

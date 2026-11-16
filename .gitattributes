@@ -1,2 +1,0 @@
-# Preserve the existing CRLF representation of the standalone legacy page.
-public/business-info.html -text whitespace=cr-at-eol

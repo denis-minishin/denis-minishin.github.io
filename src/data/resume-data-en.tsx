@@ -1,6 +1,38 @@
+import {
+  AmbitLogo,
+  BarepapersLogo,
+  BimLogo,
+  CDGOLogo,
+  ClevertechLogo,
+  ConsultlyLogo,
+  EvercastLogo,
+  Howdy,
+  JarockiMeLogo,
+  JojoMobileLogo,
+  Minimal,
+  MobileVikingsLogo,
+  MonitoLogo,
+  NSNLogo,
+  ParabolLogo,
+  TastyCloudLogo,
+  YearProgressLogo,
+} from "@/images/logos";
 import { TelegramEnIcon, WhatsAppEnIcon, ViberEnIcon } from "@/components/icons";
-import type { ResumeData } from "@/data/types";
-import { profile } from "@/data/profile";
+
+const birthdate = new Date('1998-09-16'); // Укажите Вашу дату рождения
+
+const calculateAge = (): number => {
+  const today = new Date();
+  const birthDate = new Date(birthdate);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  return age;
+};
 
 export const RESUME_DATA_EN = {
   name: "Denis Dmitrievich Minishin",
@@ -8,11 +40,13 @@ export const RESUME_DATA_EN = {
   location: "Krasnoyarsk, Russia. UTC/GMT +7 hours",
   locationLink: "https://www.google.com/maps/place/Krasnoyarsk",
   gender: "Male",
+  age: calculateAge().toLocaleString() + " years",
+  birthdate: "born on " + birthdate.toLocaleString('en', { year: 'numeric', month: 'long', day: '2-digit' }),
   about:
     "Design Engineer / Process Control Engineer",
   summary:
     [
-      "I am a design engineer with experience in automation and process control systems (PCS). I have expertise in developing working documentation (WD) for process control systems, including process flow diagrams, control loop diagrams, instrument datasheets, and automation system architecture. Additionally, I have extensive experience in designing technical documentation for control panels and automation systems.",
+      "I am a design engineer with over 4 years of experience in the field of automation and process control systems (PCS). I have expertise in developing working documentation (WD) for process control systems, including process flow diagrams, control loop diagrams, instrument datasheets, and automation system architecture. Additionally, I have extensive experience in designing technical documentation for control panels and automation systems.",
       " ",
       "In my work, I use the following CAD software:",
       "• ePLAN (Electric P8, Pro Panel, FieldSys)",
@@ -20,28 +54,28 @@ export const RESUME_DATA_EN = {
       " ",
       "Having a specialized higher education enables me to deeply understand the theoretical foundations and practical aspects of my field. I strive to automate workflows by leveraging the full potential of CAD tools. I am eager to learn new technologies, enhance my skills, and apply my knowledge and experience to achieve set objectives.",
     ],
-  avatarUrl: profile.avatarUrl,
-  personalWebsiteUrl: "/en/",
+  avatarUrl: "./images/7330010.jpg",
+  personalWebsiteUrl: "./en",
   contact: {
-    email: profile.email,
-    tel1_1: profile.primaryPhone.display,
-    tel1_2: profile.primaryPhone.href,
-    tel2_1: profile.secondaryPhone.display,
-    tel2_2: profile.secondaryPhone.href,
+    email: "denis.minishin@gmail.com",
+    tel1_1: "+7 (913) 585 15-59",
+    tel1_2: "+79135851559",
+    tel2_1: "+7 (950) 435 71-51",
+    tel2_2: "+79504357151",
     social: [
       {
         name: "Write in Telegram",
-        url: profile.social.telegram,
+        url: "https://t.me/+79135851559",
         icon: TelegramEnIcon,
       },
       {
         name: "Write in WhatsApp",
-        url: profile.social.whatsapp,
+        url: "https://wa.me/79135851559",
         icon: WhatsAppEnIcon,
       },
       {
         name: "Write in Viber",
-        url: profile.social.viber,
+        url: "viber://chat?number=%2B79135851559",
         icon: ViberEnIcon,
       },
     ],
@@ -77,7 +111,7 @@ export const RESUME_DATA_EN = {
       badges: [],
       title: "Design Engineer / Process Control Engineer",
       logo: "",
-      start: "2022-12",
+      start: "December 2022",
       end: null,
       description:
         ["⠀• Development of operational documentation",
@@ -94,8 +128,8 @@ export const RESUME_DATA_EN = {
       badges: [],
       title: "Design Engineer / Process Control Engineer",
       logo: "",
-      start: "2021-04",
-      end: "2022-12",
+      start: "April 2021",
+      end: "December 2022",
       description:
         ["• development of operational documentation for the automated process control system:",
           "⠀⠀- structural diagrams of the complex of technical means",
@@ -126,8 +160,8 @@ export const RESUME_DATA_EN = {
       badges: ["Practice"],
       title: "Practice (Production-technological practice)",
       logo: "",
-      start: "2020-06",
-      end: "2020-07",
+      start: "June 2020",
+      end: "July 2020",
       description:
         ["Job Responsibilities and Achievements:",
           "• Studying production technological processes and automated systems applied at the enterprise, as well as the principles of operation of control and management devices during operation.",
@@ -190,7 +224,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Comprehensive automation. Operating and design documentation",
-        href: "/files/portfolio/1-АК.pdf",
+        href: "./files/portfolio/1-АК.pdf",
       },
     },
     {
@@ -208,7 +242,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Comprehensive automation. Operating and design documentation",
-        href: "/files/portfolio/2-АК.pdf",
+        href: "./files/portfolio/2-АК.pdf",
       },
     },
     {
@@ -225,7 +259,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Comprehensive automation. Operating and design documentation",
-        href: "/files/portfolio/3-АК.pdf",
+        href: "./files/portfolio/3-АК.pdf",
       },
     },
     {
@@ -243,7 +277,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Comprehensive automation. Operating and design documentation",
-        href: "/files/portfolio/4-АК.pdf",
+        href: "./files/portfolio/4-АК.pdf",
       },
     },
     {
@@ -261,7 +295,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Automated general-purpose and smoke-exhaust ventilation system. Operating documentation",
-        href: "/files/portfolio/5-АОВ.pdf",
+        href: "./files/portfolio/5-АОВ.pdf",
       },
     },
     {
@@ -279,7 +313,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "The automatic control and dispatch system for engineering equipment. Operating documentation",
-        href: "/files/portfolio/6-АСУД.pdf",
+        href: "./files/portfolio/6-АСУД.pdf",
       },
     },
     {
@@ -297,7 +331,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Automated heating, ventilation, and air conditioning. Operating documentation",
-        href: "/files/portfolio/7-АОВ.pdf",
+        href: "./files/portfolio/7-АОВ.pdf",
       },
     },
     {
@@ -315,7 +349,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Automation of heating and ventilation. Operational documentation",
-        href: "/files/portfolio/8-АОВ.pdf",
+        href: "./files/portfolio/8-АОВ.pdf",
       },
     },
     {
@@ -333,7 +367,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Design Documentation. Ventilation system control panel",
-        href: "/files/portfolio/9-КД-ШУП.pdf",
+        href: "./files/portfolio/9-КД-ШУП.pdf",
       },
     },
     {
@@ -351,7 +385,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Design Documentation. Control Panel",
-        href: "/files/portfolio/10-КД-ШУ.pdf",
+        href: "./files/portfolio/10-КД-ШУ.pdf",
       },
     },
     {
@@ -369,7 +403,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Design Documentation. Control panel for pumps",
-        href: "/files/portfolio/11-КД-ШУН.pdf",
+        href: "./files/portfolio/11-КД-ШУН.pdf",
       },
     },
     {
@@ -387,7 +421,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Design Documentation. Ventilation system control panel",
-        href: "/files/portfolio/12-КД-ШУП.pdf",
+        href: "./files/portfolio/12-КД-ШУП.pdf",
       },
     },
     {
@@ -405,7 +439,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Design Documentation. Ventilation system control panel",
-        href: "/files/portfolio/13-КД-ШУП.pdf",
+        href: "./files/portfolio/13-КД-ШУП.pdf",
       },
     },
     {
@@ -423,7 +457,7 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Design Documentation. Control panel of the heating substation",
-        href: "/files/portfolio/14-КД-ШУТП.pdf",
+        href: "./files/portfolio/14-КД-ШУТП.pdf",
       },
     },
     {
@@ -441,8 +475,8 @@ export const RESUME_DATA_EN = {
       logo: "",
       link: {
         label: "Design Documentation. Control panel for exhaust fans",
-        href: "/files/portfolio/15-КД-ШУВ.pdf",
+        href: "./files/portfolio/15-КД-ШУВ.pdf",
       },
     },
   ],
-} as const satisfies ResumeData;
+} as const;

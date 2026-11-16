@@ -24,7 +24,6 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               <a
                 href={link}
                 target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 hover:underline"
               >
                 {title}{" "}
@@ -34,7 +33,9 @@ export function ProjectCard({ title, description, tags, link }: Props) {
               title
             )}
           </CardTitle>
-          {link && <div className="hidden font-mono text-xs break-all underline print:block">{link}</div>}
+          <div className="hidden font-mono text-xs underline print:visible">
+            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+          </div>
           <CardDescription className="font-mono text-xs print:text-[10px]">
             {description}
           </CardDescription>
